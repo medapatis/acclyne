@@ -382,7 +382,7 @@ bg-overlay-remove-on-hover:hover:after {
 .navbar .navbar-nav li a:focus:after,
 .navbar .navbar-nav li a:visited:after {
     width: 80px;
-    background: #1674BA;
+    background: #0b77f0;
 }
 
 .navbar .navbar-nav li a p {

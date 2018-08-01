@@ -3,7 +3,7 @@
 ***************************************************************************************************************************** */
 
 .color-primary {
-    color: #1674BA;
+    color: #0b77f0;
 }
 
 .section-header h1,
@@ -36,7 +36,7 @@
 .scrolled .navbar-nav li a:hover,
 .scrolled .navbar-nav li a:active,
 .scrolled .navbar-nav li a:focus {
-    color: #1674BA;
+    color: #ffffff;
     border-color: #e67e22;
 }
 
