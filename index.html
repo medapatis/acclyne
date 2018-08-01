@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+
+    <meta charset="utf-8">
+    <title>Zyantech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500%7cRaleway:500,700" rel="stylesheet">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/et-icon.css">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="css/vendor/owl.carousel.css">
+    <link rel="stylesheet" href="css/vendor/animations.css">
+    <link rel="stylesheet" href="css/vendor/waves.min.css">
+    <link rel="stylesheet" href="css/vendor/lightbox.min.css">
+    <link rel="stylesheet" href="css/vendor/venobox.css">
+    <link rel="stylesheet" href="css/vendor/style.css">
+
+    <!-- Resource style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/colors/color-blue.css">-->
+    <!--<link rel="stylesheet" href="css/colors/color-red.css">-->
+    <!--<link rel="stylesheet" href="css/colors/color-green.css">-->
+    <!--<link rel="stylesheet" href="css/colors/color-orange.css">-->
+    <!--<link rel="stylesheet" href="css/colors/color-yellow.css">-->
+    <!--<link rel="stylesheet" href="css/colors/color-purple.css">-->
+    <!--<link rel="stylesheet" href="css/colors/color-indigo.css">-->
+    <link rel="stylesheet" href="css/colors/your-color.css">
+    <link rel="stylesheet" href="css/buttons/buttons.css">
+
+    <!-- Your custom style -->
+    <link rel="stylesheet" href="css/custom-style.css">
+
+    <script type="text/javascript" src="js/vendor/modernizr.custom.js"></script>
+    <!--
+        <script type="text/javascript" src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+<!--    <link rel="stylesheet" href="stylee.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--TYping Link-->
+    <link rel="stylesheet" media="screen" href="style1.css">
+   
+   <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+    <script type="text/javascript">
+        function translate1() {
+            //alert();
+            //  alert($("#target").val());
+            var so = "en"; var ta = "ar";
+            if ($("#target").val() == "en") {
+                so = "ar"; ta = "en";
+            }
+            $.get("https://www.googleapis.com/language/translate/v2",
+            {
+
+                key: "AIzaSyAfSizBH5ifnKpoh0D68IwsBmueF6HgIaA",
+                source: so,
+                target: ta,
+                q: $("#translated").text()
+            },
+            function (response) {
+                $("#translated").html(response.data.translations[0].translatedText);
+
+            }, "json").fail(function (jqXHR, textStatus, errorThrown) {
+                alert("error :" + errorThrown);
+            });
+        }
+    </script>
+<!--Footer styles fa-fa-->
+<style>
+
+.fa {
+  padding:10px;
+  font-size:15px;
+  width:32px;
+  height: 32px;
+  border-radius: 100%;
+  text-decoration: none;
+  margin: 2px 2px;
+  
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+</style> 
+
+<!-- Language Picker-->
+<style>
+
+   #target {
+    /*background-color: #000!important;*/
+    color: #fff;
+       
+    background-color: transparent !important;
+    display: inline-block;
+    padding: 0;
+    /* height: 40px; */
+    overflow: hidden;
+    transition: all .3s ease;
+    margin: 15px 50px 10px 0;
+    vertical-align: top;
+    float: left;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    border:none #fff!important;
+    text-decoration: none;
+}
+
+.languagepicker:hover {
+    
+    height: 40px;
+}
+
+.languagepicker a{
+    color: #000;
+    text-decoration: none;
+}
+
+.languagepicker li {
+    display: block;
+    padding: 0px 20px;
+    line-height: 40px;
+    border-top: 1px solid #EEE;
+}
+
+.languagepicker li:hover{
+    background-color: #EEE;
+}
+
+.languagepicker a:first-child li {
+    border: none;
+    background:transparent!important;
+}
+
+.languagepicker li img {
+    margin-right: 5px;
+}
+.large:hover {
+    /* 
+    don't forget the 1px border!
+    The first language is 40px heigh, 
+    the others are 41px
+    */
+    height: 85px;
+}
+</style>
+
+<!--TYPING TEXT-->
+ <style>
+    .text-white-center {
+    color:#fff;
+    text-align:center;
+                  background: none;
+                  z-index: 100000;
+                  position: relative;
+                  top: 253px;
+                }
+                span.dwd-typing {
+    font-size: 50px;
+}
+            </style>  
+
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <!-- Navbar -->
+    <div id="nav">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                    </button>
+                     <a class="navbar-brand" href="index.html"><img src="images/logo/LOGO.png" /></a>
+                    <!-- /navbar-brand -->
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="text-center">
+                            <a href="index.html">
+                                <span></span>
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a href="#about">
+                                <span></span>
+                                <p>About Us</p>
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a href="#services">
+                                <span></span>
+                                <p>Services</p>
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a href="#team">
+                                <span></span>
+                                <p>Industry</p>
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a href="#contact">
+                                <span></span>
+                                <p>Contact Us</p>
+                            </a>
+                        </li>
+
+                        <li class="text-center">
+                       <!-- <ul class="languagepicker roundborders large text-center">
+                        <a href="#en"><li class="text-center"><img src="http://i64.tinypic.com/fd60km.png"/>ENG</li></a>
+                        <a href="#de"><li class="text-center"><img src="images/logo/it.png"/>ARB</li></a>
+                        </ul>-->
+                         <select id="target" onchange="translate1()">
+                            <option value="en" style="color: #fff!important;background: #000;background-image: url("http://i64.tinypic.com/fd60km.png");>
+                                <img src="http://i64.tinypic.com/fd60km.png"/>ENG</option>
+                            <option value="ar" style="color: #fff!important;background: #000;"><img src="images/logo/it.png"/>ARB</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+
+
+    <!-- /Navbar Over -->
+
+    <!-- particles.js container -->
+ <div id="particles-js">
+     <div class="dwd-fwe text-white-center et_pb_typing_effect dwd-typing-static" data-typing-speed=100 data-typing-delay=0 data-typing-backdelay=1500 data-typing-loop=true
+        data-typing-cursor=false>
+        <span class="et_pb_fullwidth_header_subhead">&nbsp;&nbsp;&nbsp; </span>
+        <h1 style="font-size: 60px!important;color:white; text-transform:uppercase;" id="translated"> DREAM. THINK. DEVELOP</h1>   
+            <br>
+            <span class="dwd-typed" style="display:none;opacity:0;visibility:hidden;font-size:30px!important;" ><P >Digital Transformation | Artificial Intelligence | Development</P></span>
+            <span class="dwd-typing"></span>
+            <span class="dwd-aftertext"></span>
+                                   
+     </div>
+      <!-- .et_pb_section -->
+      <span class="wrap"></span>
+        
+        <!--<div class="scroll-btn xs-hidden">
+            <a href="#about">
+                <span></span>
+            </a>
+        </div>-->
+</div> 
+<span id="about"></span> 
+           
+
+
+    <!-- Vison Us Section -->
+    <section  class="section" style="background-image: url(images/visionbg.jpg);">
+        <div class="container">
+            <div class="section-header text-center">
+                <h1 class="title">Vision</h1>
+            </div>
+            <!-- /.section-header -->
+            <div class="about-us row">
+                <div class="col-sm-12 animatedParent animateOnce ">
+                    <div class=" col-sm-12 animated  fadeInUp">
+                        <div class="skills">
+                            <!--<h1 class="color-primary"><strong>Our History</strong></h1>-->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dolore quos nobis magnam quisquam soluta libero suscipit natus laudantium! Itaque earum et natus non molestiae ab? Similique labore, eveniet qui atque, magnam quae deserunt. Dolores distinctio alias praesentium suscipit obcaecati nemo sunt voluptate exceptur. Aliquam, eius assumenda, alias sunt inventore ex sint recusandae expedita commodi quidem a itaque architecto tempore.</p>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- /.about-us -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /Vision Section Over -->
+
+<section class="our-works page-section" id="our-works">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-title">OUR WORK</h2>
+          </div>
+        </div>
+
+        <div class="row work-row">
+          <div class="col-sm-12 visible-xs   right-animate"><img src="images/service/ezgif.com-resize (4).gif"></div>
+          <div class="col-sm-6 col-md-5 left-animate">
+            <h1 class="color-primary"><strong>Advanced Technology</strong></h1>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dolore quos nobis magnam quisquam soluta libero suscipit natus laudantium! Itaque earum et natus non molestiae ab? Similique labore, eveniet qui atque, magnam quae deserunt. Dolores distinctio alias praesentium suscipit obcaecati nemo sunt voluptate exceptur. Aliquam, eius assumenda, alias sunt inventore ex sint recusandae expedita commodi quidem a itaque architecto tempore.</p>
+          </div>
+          <div class="col-md-1 hidden-sm"></div>
+          <div class="col-sm-6 hidden-xs   right-animate"><img src="images/service/ezgif.com-resize (4).gif"></div>
+        </div>
+
+        <div class="row work-row">
+          <div class="col-sm-6  left-animate" id="pareto"><img src="images/service/per-Monotor1.png" style="width:350px"></div>
+          <div class="col-md-1 hidden-sm"></div>
+          <div class="col-sm-6 col-md-5 right-animate">
+             <h1 class="color-primary"><strong>Pareto Principle</strong></h1>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dolore quos nobis magnam quisquam soluta libero suscipit natus laudantium! Itaque earum et natus non molestiae ab? Similique labore, eveniet qui atque, magnam quae deserunt. Dolores distinctio alias praesentium suscipit obcaecati nemo sunt voluptate exceptur. Aliquam, eius assumenda, alias sunt inventore ex sint recusandae expedita commodi quidem a itaque architecto tempore.</p>
+          </div>
+        </div>
+
+        <div class="row work-row">
+          <div class="col-sm-12 visible-xs   right-animate"><img src="images/service/ezgif.com-resize (3).gif" style="width:350px"></div>
+          <div class="col-sm-6 col-md-5 left-animate">
+             <h1 class="color-primary"><strong>Digital innovation</strong></h1>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dolore quos nobis magnam quisquam soluta libero suscipit natus laudantium! Itaque earum et natus non molestiae ab? Similique labore, eveniet qui atque, magnam quae deserunt. Dolores distinctio alias praesentium suscipit obcaecati nemo sunt voluptate exceptur. Aliquam, eius assumenda, alias sunt inventore ex sint recusandae expedita commodi quidem a itaque architecto tempore.</p>
+          </div>
+          <div class="col-md-1 hidden-sm"></div>
+          <div class="col-sm-6 hidden-xs   right-animate"><img src="images/service/ezgif.com-resize (3).gif" style="width:350px"></div>
+        </div>
+
+        <div class="row work-row">
+          <div class="col-sm-6   left-animate"><img src="images/service/quick.gif" style="width:380px;height:300px"></div>
+          <div class="col-md-1 hidden-sm"></div>
+          <div class="col-sm-6 col-md-5 right-animate">
+           <h1 class="color-primary"><strong>Quick Commnuication</strong></h1>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dolore quos nobis magnam quisquam soluta libero suscipit natus laudantium! Itaque earum et natus non molestiae ab? Similique labore, eveniet qui atque, magnam quae deserunt. Dolores distinctio alias praesentium suscipit obcaecati nemo sunt voluptate exceptur. Aliquam, eius assumenda, alias sunt inventore ex sint recusandae expedita commodi quidem a itaque architecto tempore.</p>
+          </div>
+        </div>
+
+        <div class="row work-row">
+          <div class="col-sm-12 visible-xs work-image right-animate animated"><img src="img/content/uCoachW7.png" style="width:350px;height:350px"></div>
+          <div class="col-sm-6 col-md-5 left-animate">
+            <h4>uCoach</h4>
+            <p>With uCoach®, you'll have a direct line to your coach and a personalized path for achieving your goals in college and after graduation.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=com.insidetrack.src">View on Google Play</a></p>
+          </div>
+          <div class="col-md-1 hidden-sm"></div>
+          <div class="col-sm-6 hidden-xs work-image right-animate animated"><img src="img/content/uCoachW7.png" style="width:350px;height:350px"></div>
+        </div>
+
+        <!-- <div class="row work-row">
+          <div class="col-sm-12 visible-xs work-image right-animate animated"><img src="img/content/w5.png"></div>
+          <div class="col-sm-6 col-md-5 left-animate">
+            <h4>Dream Portal</h4>
+            <p>Dream Portal is a cloud based service which provide user with latest news, articles, mobiles, etc. Dream Portal categorize applications in a more descriptive way and provide excellent customer service through chatting capabilities.</p>
+          </div>
+          <div class="col-md-1 hidden-sm"></div>
+          <div class="col-sm-6 hidden-xs work-image right-animate animated"><img src="img/content/w5.png"></div>
+        </div> -->
+
+        <div class="row text-center show-link" style="display:none"><a href="">Show Less</a></div>
+      </div>
+    </section>
+    <!-- About Us Section -->
+
+    <!-- /About Us Section Over -->
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section bg-overlay" data-stellar-background-ratio="0.2">
+        <div class="container">
+            <div class="section-header-white text-center">
+                <h1 class="title">Testimonials</h1>
+            </div>
+            <!-- /.section-header -->
+            <div class="owl-carousel-testimonials animatedParent animateOnce">
+                <div class="testimonial text-center animated fadeIn">
+                    <div class="testimonial-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate tempora illo soluta harum dolor blanditiis corporis voluptatibus cum temporibus, praesentium, possimus ea saepe labore ipsum hic assumenda obcaecati iusto!
+                        </p>
+                    </div>
+                    <!-- /.testimonial-text -->
+                    <div class="testimonial-person">
+                        <img src="images/team/Frein_Headshot.jpg" class="img-circle" alt="">
+                        <h2>John DOE</h2>
+                        <!--<p>Web Designer</p>
+                        <h3><a href="#"><i class="icon-facebook"></i></a> | <a href="#"><i class="icon-twitter"></i></a> | <a href="#"><i class="icon-googleplus"></i></a> | <a href="#"><i class=" icon-linkedin"></i></a></h3>-->
+                    </div>
+                    <!-- /.testimonial-person -->
+                </div>
+                <!-- /.testimonial -->
+                <div class="testimonial text-center">
+                    
+                    <div class="testimonial-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate tempora illo soluta harum dolor blanditiis corporis voluptatibus cum temporibus, praesentium, possimus ea saepe labore ipsum hic assumenda obcaecati iusto!
+                            
+                        </p>
+                    </div>
+                    <!-- /.testimonial-text -->
+                    <div class="testimonial-person">
+                        <img src="images/team/Dave-Bookbinder-128x128.jpg" class="img-circle" alt="">
+                        <h2>John DOE</h2>
+                        <!--<p>Web Designer</p>
+                        <h3><a href="#"><i class="icon-facebook"></i></a> | <a href="#"><i class="icon-twitter"></i></a> | <a href="#"><i class="icon-googleplus"></i></a> | <a href="#"><i class=" icon-linkedin"></i></a></h3>-->
+                    </div>
+                    <!-- /.testimonial-person -->
+                </div>
+                <!-- /.testimonial -->
+            </div>
+            <!-- /.owl-carousel-testimonials -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Testimonials Section Over -->
+
+    <!-- Contact Details -->
+    <div class="contact-details container-fluid" style="height:35%;">
+        <div class="col-sm-4 detail-cadre text-center">
+            <!--<h1><i class="icon-map"></i></h1>-->
+            <h2 style="color:#1674BA">Offices</h2>
+            <br>
+            <p>Dallas, USA </p>
+            <p>Riyadh, Saudi Arabia</p>
+        </div>
+        <!-- /.detail-cadre(Adresse) -->
+        <div class="col-sm-4 detail-cadre text-center">
+            <!--<h1><i class="icon-phone"></i></h1>-->
+            <h2 style="color:#1674BA">Company</h2>
+            <br>
+            <p>Terms Of Us </p>
+            <p>Contact Us</p>
+        </div>
+        <!-- /.detail-cadre(Phone) -->
+        <div class="col-sm-4 detail-cadre text-center">
+            <!--<h1><i class="icon-envelope"></i></h1>-->
+            <h2 style="color:#1674BA">Follow Us</h2>
+            <br>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+        </div>
+        <!-- /.detail-cadre(Email) -->
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer   text-center animatedParent animateOnce" style="background:#383838">
+        <!--<h1 class="animated bounceIn">Zyantech</h1>
+        <h2 class="animated fadeIn"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></h2>-->
+        <div class="row ter" style="min-height: 80px!important;background: #383838!important;">
+            <div class="col-sm-6" style="margin-top:30px;">
+                <p class="">Copyright © 2018 Zyantech. All rights Reserved.</p>
+            </div>
+    
+            <div class="col-sm-6" style="margin-top:30px;">
+                <p class="">Web designed by Yulanto Web Creations Pvt Ltd.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer Over -->
+
+    <!-- Scripts -->
+
+    <script type="text/javascript" src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/vendor/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/vendor/typed.js"></script>
+   <!-- <script type="text/javascript" src="js/vendor/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.counterup.min.js"></script>-->
+    <script type="text/javascript" src="js/vendor/jquery.stellar.min.js"></script>
+    <script type="text/javascript" src="js/vendor/waves.min.js"></script>
+    <script type="text/javascript" src="js/vendor/css3-animate-it.js"></script>
+    <script type="text/javascript" src="js/vendor/lightbox.min.js"></script>
+    <script type="text/javascript" src="js/vendor/snap.svg-min.js"></script>
+    <script type="text/javascript" src="js/vendor/main.js"></script>
+    <script type="text/javascript" src="js/vendor/venobox.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.particleground.min.js"></script>
+    <script type="text/javascript" src="js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/vendor/masonry.pkgd.min.js"></script>
+    
+   <!-- Google maps -->
+  <!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbGClpicHhr9OebjbGlUrLSkCfj4ioiR0"></script>-->
+
+    <!-- Customized Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 5000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+            </script>
+             <script src="js/particles.js"></script>
+        <script src="js/app.js"></script>
+          <script type='text/javascript' src='js/typed.js'></script>
+    <script type='text/javascript' src='js/dwd-typing.js'></script>
+</body>
+</html>
+
+
+<!--TYPEING SCRIPY-->
+<!--<script src="js/script.js"></script>-->
+
+    
+
+    <!--PARTICLES SCRIPTS-->
+    <!-- scripts -->
+       
+
+        <!--<script type='text/javascript' src='js/js1/typed.js'></script>-->
+    <!--<script type='text/javascript' src='js/js1/dwd-typing.js'></script>-->
+
+        <!-- stats.js -->
+        <!--<script src="js/lib/stats.js"></script>-->
+        <!--<script>
+          var count_particles, stats, update;
+          stats = new Stats;
+          stats.setMode(0);
+          stats.domElement.style.position = 'absolute';
+          stats.domElement.style.left = '0px';
+          stats.domElement.style.top = '0px';
+          document.body.appendChild(stats.domElement);
+          count_particles = document.querySelector('.js-count-particles');
+          update = function() {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+              count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+          };
+          requestAnimationFrame(update);
+
+        </script>-->
+
+      

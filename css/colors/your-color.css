@@ -1,0 +1,81 @@
+/*
+** To set your favorite color you can put your color HEX code instead of mine '#e67e22' and call this file in html template :)  
+***************************************************************************************************************************** */
+
+.color-primary {
+    color: #1674BA;
+}
+
+.section-header h1,
+.rotator,
+.faq-cat-content .panel-heading.active-faq,
+.quote h3,
+.process-slide .process-step h2 span,
+.service-center h2:after,
+.service-center:hover h2,
+.service-center:hover h1,
+.service h2:before,
+.service:hover h2,
+.service:hover h1,
+.member:hover h2,
+.member:hover h1,
+.member:hover h2:before,
+.member img,
+.pricing-plan-btn,
+.pricing-plan-best .pricing-plan-header,
+.pricing-plan .pricing-plan-price,
+.testimonial span i,
+.owl-carousel-testimonials .owl-prev:hover,
+.owl-carousel-testimonials .owl-next:hover,
+.news h3 a,
+.scrolled .navbar-brand,
+.scrolled .navbar-brand:hover,
+.scrolled .navbar-brand:active,
+.scrolled .navbar-brand:focus,
+.scrolled .navbar-brand:visited,
+.scrolled .navbar-nav li a:hover,
+.scrolled .navbar-nav li a:active,
+.scrolled .navbar-nav li a:focus {
+    color: #1674BA;
+    border-color: #e67e22;
+}
+
+.pricing-plan-best .pricing-plan-price,
+.pricing-plan .pricing-plan-header,
+.pricing-plan .pricing-plan-header,
+.service-center h2:after,
+.navbar-default .navbar-toggle .icon-bar,
+.scrolled .navbar-nav li a:hover:after,
+.scrolled .navbar-nav li a:active:after,
+.scrolled .navbar-nav li a:focus:after,
+.scrolled .navbar-nav li a:visited:after,
+.contact-details {
+    background-color: #263544;
+}
+
+
+/* -- primary button -- */
+
+.btn-transparent-primary,
+.btn-primary-transparent {
+    border-color: #e67e22;
+}
+
+.btn-transparent-primary,
+.btn-primary-transparent:hover,
+.btn-primary-transparent:active,
+.btn-white-primary,
+.btn-primary-white:hover,
+.btn-primary-white:active,
+.btn-primary-black:hover,
+.btn-primary-black:active {
+    color: #e67e22;
+}
+
+.btn-transparent-primary:after,
+.btn-primary-transparent:before,
+.btn-white-primary:after,
+.btn-primary-white:before,
+.btn-primary-black:before {
+    background: #e67e22;
+}
