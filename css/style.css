@@ -382,7 +382,7 @@ bg-overlay-remove-on-hover:hover:after {
 .navbar .navbar-nav li a:focus:after,
 .navbar .navbar-nav li a:visited:after {
     width: 80px;
-    background: #0b77f0;
+    background: #1674BA;
 }
 
 .navbar .navbar-nav li a p {
@@ -1599,7 +1599,7 @@ canvas.particles-js-canvas-el {
     width: 100%;
     height: 60%;
     padding: 25px 0;
-    color: #fefefe;
+    color: #000000;
     background-image: url("../images/testimonials-bg.jpg");
     background-attachment: fixed;
     background-size: cover;
