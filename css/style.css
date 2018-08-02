@@ -765,9 +765,9 @@ canvas{
   width: 100%;
   height: 100%;
   background-color:;
-  background-image: url('../images/bg3.jpg');
- // background-image: -webkit-linear-gradient(68deg,#0ca6bb,#0e9aad 18%,#359db9 30%,#59a0c5 47%,#7296c9 72%,rgba(141,122,218,.81)),-webkit-linear-gradient(270deg,#049cb0,#049cb0);
-   // background-image: linear-gradient(22deg,#0ca6bb,#0e9aad 18%,#359db9 30%,#59a0c5 47%,#7296c9 72%,rgba(141,122,218,.81)),linear-gradient(180deg,#049cb0,#049cb0);
+ // background-image: url('../images/bg3.jpg');
+  background-image: -webkit-linear-gradient(68deg,#0ca6bb,#0e9aad 18%,#359db9 30%,#59a0c5 47%,#0074c8 72%,rgba(141,122,218,.81)),-webkit-linear-gradient(270deg,#049cb0,#0074c8);
+    background-image: linear-gradient(22deg,#0ca6bb,#0e9aad 18%,#359db9 30%,#59a0c5 47%,#0074c8 72%,rgba(141,122,218,.81)),linear-gradient(180deg,#049cb0, #0074c8);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -2147,7 +2147,7 @@ footer p {
 }
 #translated{
     font-size: 60px!important; text-transform:uppercase;
-    text-align: left ; overflow: visible;top:300px;
+    text-align: left ; overflow: visible;top:150px;margin:0;
 }
 #mainLeft{
     width:59%;top:200px;text-align: left;
